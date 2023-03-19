@@ -1,29 +1,13 @@
+ let yourArray = ["hello", 42, true, null, {name: "John"}];
 
-let complexArray = [
-  [
-    {
-      one: 1,
-      two: 2
-    },
-    {
-      three: 3,
-      four: 4
-    }
-  ],
-  [
-    {
-      a: "a",
-      b: "b"
-    },
-    {
-      c: "c",
-      d: "d"
-    }
-  ]
-];
+    // Access the array length property and display it
+    let length = yourArray.length;
+    console.log("Length:", length);
 
-let yourArray = ['hello', 42, true, null, 'world'];
-console.log(yourArray.length);
-// logs 5
-
-
+    // Add each element of the array to an unordered list
+    let list = document.getElementById("my-list");
+    yourArray.forEach(function(item) {
+      let li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
